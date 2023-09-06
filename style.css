@@ -237,6 +237,7 @@ html {
 #slider .text_description {
     margin: 12px 0;
     font-size: 16px;
+    text-shadow: 0 0 1.5px #000;
 } 
 
 /* Layout content */
