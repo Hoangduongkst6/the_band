@@ -1,0 +1,537 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 
+1. Vị trí
+2. Kích thức
+3.Màu sắc 
+4.Kiểu dáng(kiểu chữ, hình, ...)
+*/
+
+/* 
+1. Từ ngoại vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+
+*/
+
+/* Common */
+
+.text_white {
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mt_8 {
+    margin-top: 8px !important;
+}
+
+.mt_16 {
+    margin-top: 16px !important;
+}
+
+.mt_32 {
+    margin-top: 32px !important;
+}
+
+.row {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-right: 8px;                         
+    padding-left: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 11px 17px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
+
+/* Main */
+/* #main {
+
+} */
+
+/* header layout */
+#header {
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #000;
+    height: 46px;
+    position: fixed;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav li {
+    list-style: none;
+}
+
+#nav > li {
+    display: inline-block;
+} 
+
+#nav > li > a {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 24px;
+}
+
+#nav li a {
+    text-decoration: none; 
+    line-height: 48px;
+    display: block;
+}
+
+
+#nav> li:hover > a,
+#nav .subnav li:hover a {
+    background: #ccc;
+    color: #000;
+}
+
+#nav .down_item {
+    font-size: 12px;
+}
+
+
+/* search */
+
+#header .search_btn:hover {
+    background-color: red;
+    cursor: pointer
+}
+
+#header .search_btn,
+#header .mobile_menu_btn {
+    float: right;
+    padding: 0 24px;
+}
+
+#header .menu_item,
+#header .search_item {
+    font-size: 20px;
+    color: #fff;
+    line-height: 48px;
+    display: block;
+}
+
+/* Menu  */
+#header .mobile_menu_btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#header .mobile_menu_btn:hover .menu_item {
+    color: #000;
+}
+
+#header .mobile_menu_btn {
+    display: none;
+}
+
+#header .mobile_menu_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*subnav */
+
+#nav .subnav {
+    background: #fff;
+    min-width: 180px;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav a {
+    color: #000;
+}
+
+#nav .subnav li a {
+    line-height: 38px;
+    width: 180px;
+    padding: 0 24px;
+}
+
+/* slider layout */
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    position: relative;
+    background: url('./assets/image/slider1.jpg') top center / cover no-repeat;
+}
+
+#slider .text_content {
+    bottom: 0;
+    padding: 16px 32px;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    color: #fff;
+} 
+
+#slider .text_heading {
+    margin: 8px 0;
+    font-size: 24px;
+    font-weight: 500;
+} 
+
+#slider .text_description {
+    margin: 12px 0;
+    font-size: 16px;
+} 
+
+/* Layout content */
+/* #content {
+    
+} */
+
+/* About */
+.content_section {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+.section_heading {
+    margin: 16px 0;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.section_subheading {
+    margin: 12px 0;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#content .text_about {
+    margin: 12px 0;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/* Team */
+#content .member_list {
+    padding: 32px 0;
+} 
+
+#content .member_name {
+    margin: 16px 0;
+}
+#content .member_img {
+    margin-bottom: 16px;
+    width: 60%;
+    border-radius: 4px;
+}
+
+/* Tour */
+.tour_section {
+    background: #000;
+}
+
+.tickets_list {
+    background: #fff;
+    list-style: none;
+}
+
+.tour_section .tickets_list li {
+    padding: 8px 16px;
+    color: #757575;
+    border-bottom: 1px solid #ddd;
+}
+
+.tour_section .tickets_list .sold_out {
+    margin-left: 16px;
+    padding: 3px 6px;
+    background: #f44336;
+    color: #fff;
+}
+
+
+.tour_section .tickets_list .quantity {
+    float: right;
+    padding: 0 8px;
+    background: #000;
+    color: #fff;
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+/* Places */
+.places_list {
+   margin-top: 16px;
+   margin-bottom: 32px;
+}
+
+.place_item {
+    margin-bottom: 16px;
+}
+
+.place_img {
+    width: 100%;
+    display: block;
+}
+
+.place_body {
+    background: #fff;
+    padding: 1px 16px;
+    line-height: 1.4;
+}
+
+.place_heading {
+    margin: 16px 0;
+}
+
+.place_time {
+    margin: 16px 0;
+    opacity: 0.6;
+}
+
+.place_description {
+    margin: 16px 0;
+}
+
+.place_button {
+    border: none;
+}
+
+/* Contact */
+
+.contact_container {
+    padding: 32px 0;
+}
+
+/* Info */
+.contact_info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact_info i[class*="ti-"] {
+    width: 30px;
+    display: inline block;
+}
+
+/* Form */
+.form_control {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.form_submit {
+    float: right;
+    border: none;
+}
+
+/* map */
+#map_img img{
+    width: 100%;
+}
+
+
+
+/* Footer layout */
+#footer {
+    padding: 64px 16px;
+    height: 216px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.footer_head a {
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer_body {
+    margin: 16px 0;
+}
+
+.footer_link {
+    color: #000;
+}
+
+/* Modal */
+.modal {
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex
+}
+
+.modal_container {
+    width: 900px;
+    min-height: 200px;
+    background: #fff;
+    max-width: calc(100% - 32px);
+    animation: modalFadeTn ease 0.3s;
+}
+.modal_close:hover {
+    opacity: 1;
+}
+
+.modal_close {
+    float: right;
+    padding: 8px 12px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.modal_head {
+    background: #009688;
+    padding: 32px 16px;
+}
+
+.modal_header {
+    margin: 12px 0;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+}
+
+.modal_body {
+    padding: 1px 16px;
+    min-height: 200px;
+}
+
+label.modal_label {
+    display: block;
+    margin: 16px 0 8px;
+}
+
+input.madal_input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+.modal_button {
+    display: block;
+    border: 0;
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px;
+    color: #fff;
+    background: #009688;
+    opacity: .8;
+}
+
+.info_img {
+    display: inline;
+}
+
+.modal_button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modal_button_close:hover {
+    opacity: 1;
+}
+
+.modal_button_close {
+    border: 0;
+    margin: 16px 0;
+    background: #f44336;
+    padding: 8px 16px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.modal_help {
+    float: right;
+    margin: 16px;
+}
+
+.modal_help a {
+    margin: 0 0 0 2px;
+    color: #2196F3;
+}
+
+@keyframes modalFadeTn {
+    from {
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
