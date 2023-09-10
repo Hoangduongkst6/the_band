@@ -431,15 +431,14 @@ html {
     animation: modalFadeTn ease 0.3s;
 }
 .modal_close:hover {
-    opacity: 1;
+    opacity: 0.9;
+    cursor: pointer;
 }
 
 .modal_close {
     float: right;
     padding: 8px 12px;
     color: #fff;
-    cursor: pointer;
-    opacity: 0.6;
 }
 
 .modal_head {
@@ -459,12 +458,12 @@ html {
     min-height: 200px;
 }
 
-label.modal_label {
+.modal_label {
     display: block;
     margin: 16px 0 8px;
 }
 
-input.madal_input {
+.madal_input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -477,7 +476,6 @@ input.madal_input {
     padding: 16px;
     color: #fff;
     background: #009688;
-    opacity: .8;
 }
 
 .info_img {
@@ -485,12 +483,8 @@ input.madal_input {
 }
 
 .modal_button:hover {
-    opacity: 1;
+    opacity: 0.9;
     cursor: pointer;
-}
-
-.modal_button_close:hover {
-    opacity: 1;
 }
 
 .modal_button_close {
@@ -499,7 +493,10 @@ input.madal_input {
     background: #f44336;
     padding: 8px 16px;
     color: #fff;
-    opacity: 0.8;
+}
+
+.modal_button_close:hover {
+    opacity: 0.9;
 }
 
 .modal_help {
